@@ -25,7 +25,7 @@ const getRepositoryData = async (authToken) => {
       query repositoryId($owner: String!, $name: String!) {
         repository(owner: $owner, name: $name) {
           id
-          discussionCategories(first: 10) {
+          discussionCategories(first: 100) {
             nodes {
               id
               name
