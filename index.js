@@ -60,6 +60,7 @@ const readTemplateFile = async () => {
 
 const buildDiscussionBody = async () => {
   core.debug("discussion-body");
+  core.debug("is-this-doing-anything?");
   const discussionBody = core.getInput("discussion-body");
   if(discussionBody) {
     return discussionBody;
