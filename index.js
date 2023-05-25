@@ -49,6 +49,7 @@ const getRepositoryData = async (authToken) => {
 }
 
 const readTemplateFile = async () => {
+  core.debug("read-template-file")
   const template = core.getInput("filename") || "./.github/DISCUSSION_TEMPLATE.md"
 
   core.debug(`Reading template file: ${template}`)
@@ -68,6 +69,7 @@ const buildDiscussionBody = async () => {
 }
 
 const buildDiscussionTitle = () => {
+    core.debug("discussion-title")
   const titleText = core.getInput("title")
 
   if (core.getInput("title-date") === "true") {
